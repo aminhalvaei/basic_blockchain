@@ -56,7 +56,7 @@ block_printer(genesis_block,last_block_hash,1)
 
 # loop that builds blocks and try to find nonce for them to add them to blockchain successfully
 # except for last block because of its hard problem -> range(0,15)
-for index in range(0,15):
+for index in range(0,14):
     
     temp_block = {'main' : ledgers[index],
                   'Nonce' : None,
