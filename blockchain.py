@@ -3,16 +3,9 @@ from hashlib import sha256
 
 
 def block_printer(_block,_current_block_hash,_block_number):
-    
-    # output_block = {'Block Number' : _block_number,
-    #                 'Hash' : _current_block_hash,
-    #                 'Previous Hash' : _block['previous_hash'],
-    #                 'Nonce' : _block['Nonce']}
-    
     print(' Block Number : {}\n Hash : {}\n Previous Hash : {}\n Nonce : {}\n'
     .format(_block_number,_current_block_hash,_block['previous_hash'],_block['Nonce']))
     print('-'*20)
-
 
 
 # this function solves the hash puzzle as miners do
@@ -24,8 +17,6 @@ def miner(_block,_prefix):
             nonce = str(i)
             return nonce
         
-
-
 
 # GenesisBlock
 genesis_fd = open('GenesisBlock/GenesisBlock/GenesisBlock.json')
