@@ -21,7 +21,7 @@ def miner(_block,_prefix):
         puzzle_input = str(_block) + str(i)
         digest = sha256(puzzle_input.encode()).hexdigest()
         if digest.startswith(_prefix):
-            nonce = str(i)
+            nonce = str(i) + ''
             return nonce
         
 
